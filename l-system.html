@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>L-system</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="styles/sticky-footer.css">
+        <link rel="stylesheet" href="styles/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="turtle.js"></script>
+        <script src="examples.js"></script>
+        <script src="l-system.js"></script>
+        <link rel=icon href="/images/plant32.png" sizes="32x32" type="image/png">
+        <link rel="apple-touch-icon" href="/images/plant120.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/images/plant120.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/images/plant152.png">
+        <link rel="apple-touch-icon" sizes="167x167" href="/images/plant167.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/plant180.png">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    </head>
+    <body>
+        <div class="container">
+            <div class="page-header">
+                <h1>L-system</h1>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-8">
+                    <span class="btn btn-info" id="plusButton">
+                        <i class="fa fa-search-plus"></i>
+                    </span>
+                    <span class="btn btn-info" id="minusButton">
+                        <i class="fa fa-search-minus"></i>
+                    </span>
+                    <span class="btn-xs btn-success" id="upButton">
+                        <i class="fa fa-arrow-up"></i>
+                    </span>
+                    <span class="btn-xs btn-success" id="leftButton">
+                        <i class="fa fa-arrow-left"></i>
+                    </span>
+                    <span class="btn-xs btn-success" id="rightButton">
+                        <i class="fa fa-arrow-right"></i>
+                    </span>
+                    <span class="btn-xs btn-success" id="downButton">
+                        <i class="fa fa-arrow-down"></i>
+                    </span>
+                    <canvas id="l-canvas" width="600" height="400"></canvas>
+                </div>
+                
+                <div class="col-sm-4">
+                    <select id="examples" class="form-control">
+                    </select>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="angle">Angle</span>
+                        <input id="angleInput" type="text" class="form-control" placeholder="angle" 
+                            aria-describedby="angle">
+                        <span class="input-group-addon">°</span>
+                    </div>
+                    <br />
+                    <div class="input-group">
+                        <span class="input-group-addon" id="axiom">Axiom</span>
+                        <input id="axiomInput" type="text" class="form-control" placeholder="axiom" aria-describedby="axiom">
+                    </div>
+                    <br />
+                    <table class="table table-stripped" id="rulesTable">
+                		<thead>
+                			<tr>
+                				<th>Pattern</th>
+                				<th>Replace</th>
+                			</tr>
+                		</thead>
+                		<tbody>
+                		</tbody>
+                	</table>
+                	<br />
+                	
+                    <button id="setupButton" class="btn btn-primary" type="button">Set</button>
+                    <button id="addRuleButton" class="btn btn-default" type="button">Add rule</button>
+                </div>
+            </div>
+			
+            <div class="row">
+                <div class="col-sm-12">
+                    <button id="iterateButton" class="btn btn-primary" type="button">Iterate</button>
+                    <button id="clearHistoryButton" class="btn btn-default" type="button">Clear history</button>
+                    
+                    <table class="table table-stripped" id="resultsTable">
+                		<thead>
+                			<tr>
+                				<th style="width: 5%">It. #</th>
+                				<th>Result</th>
+                			</tr>
+                		</thead>
+                		<tbody>
+                		</tbody>
+                	</table>
+                </div>
+			</div>
+			<footer class="footer">
+            <div class="container">
+                <p>
+                    <span class="text-muted">Martin Polák 2016.</span>
+                    <a rel="license" href="http://creativecommons.org/publicdomain/mark/1.0/">
+                        <img src="http://i.creativecommons.org/p/mark/1.0/88x31.png"
+                         style="border-style: none;" alt="Public Domain Mark" />
+                    </a>
+                </p>
+                <a href="www.nigol.cz">www.nigol.cz</a>, 
+                <a href="https://github.com/nigol/l-system">github.com/nigol/l-system</a>
+            </div>
+        </footer>
+    </body>
+</html>

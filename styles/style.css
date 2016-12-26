@@ -1,0 +1,54 @@
+canvas {
+    border: 1px solid lightgrey;
+    z-index: 1;
+}
+
+#plusButton {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 2;
+}
+
+#minusButton {
+    position: absolute;
+    top: 60px;
+    left: 20px;
+    z-index: 2;
+}
+
+#upButton {
+    position: absolute;
+    top: 150px;
+    left: 29px;
+    z-index: 2;
+}
+
+#leftButton {
+    position: absolute;
+    top: 172px;
+    left: 17px;
+    z-index: 2;
+}
+
+#rightButton {
+    position: absolute;
+    top: 172px;
+    left: 40px;
+    z-index: 2;
+}
+
+#downButton {
+    position: absolute;
+    top: 194px;
+    left: 29px;
+    z-index: 2;
+}
+
+input.rulesPattern {
+    width: 4em;
+}
+
+input.rulesReplace {
+    width: 8em;
+}
