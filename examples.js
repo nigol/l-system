@@ -118,4 +118,21 @@ var examples = {
                     },
                 ]
         },
+        
+    "Dragon curve":
+        {
+            "angle": 90,
+            "axiom": "FX",
+            "rules": 
+                [
+                    {
+                        "pattern": "X",
+                        "replace": "X+YF+"
+                    },
+                    {
+                        "pattern": "Y",
+                        "replace": "-FX-Y"
+                    },
+                ]
+        },
 };

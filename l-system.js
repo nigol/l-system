@@ -159,10 +159,17 @@ function appendIterateToTable(it) {
 }
 
 function doNextIteration(previous, rules) {
-    let result = previous;
+    let result = "";
+    let rul = {};
     rules.forEach(function (v, i) {
-        let regexp = new RegExp(v.pattern, "g");
-        result = result.replace(regexp, v.replace);
+        rul[v.pattern] = v.replace;
+    });
+    previous.split("").forEach(function (v, i) {
+        if (rul[v] == undefined) {
+            result = result + v;
+        } else {
+            result = result + rul[v];
+        }
     });
     return result;
 }
