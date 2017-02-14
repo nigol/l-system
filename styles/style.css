@@ -1,6 +1,7 @@
 canvas {
     border: 1px solid lightgrey;
     z-index: 1;
+    width: 100%;
 }
 
 #plusButton {
